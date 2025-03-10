@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*.......coding the navigation section*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/slab.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+nav{
+    
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding: 2% 6%;
+    justify-content: space-between;
+    z-index: 999;
+    box-shadow: 2PX 2PX 10px 10px rgba(0, 0, 0, 0.19);
+}
+/*this is the image in the nav bar*/
+nav img{
+    width: 50px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 2%;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    text-align: center;
+    color:#fff;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover{
+    font-weight: bolder;
+
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*...now i a coding the body.....textbox*/
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left:50% ;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.visit-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 14px 12px 12px 34px;
+    border: 1px solid;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+}
+
+.visit-btn:hover{
+    border: 1px solid #757373;
+    background: #979292;
+    transition: 1s;
+}
+/*hiding the icons from font awesome......*/
+
+nav .fa{
+    display: none;
+
+}
+
+/*responsive part for small screens like smart phones and tablets......*/
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 30px;
+    }
+
+    .nav-links{
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        background: #e09191;
+        transition: 1s;
+    }
+    
+    .nav-links ul li{
+        display: block;
+    }
+
+    /*displaying the icons from font awesome in smaller screens......*/
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 22px;
+    }
+
+    nav img{
+        width: 20px;
+    }
+
+    .nav-links ul{
+        padding: 35px;
+
+    }
+
+}
