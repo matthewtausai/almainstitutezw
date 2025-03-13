@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*.......coding the navigation section*/
+.header{
+    min-height: 80vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/schoollib.PNG);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
+}
+
+nav{
+    background: linear-gradient(rgba(27, 27, 27, 0.7)100%, rgba(159, 159, 163, 0.7));
+    position:fixed;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding: 2% 6%;
+    justify-content: space-between;
+    z-index: 999;
+    box-shadow: 2PX 2PX 10px 10px rgba(0, 0, 0, 0.19);
+}
+/*this is the image in the nav bar*/
+nav img{
+    width: 50px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 2%;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    text-align: center;
+    color:#fff;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover{
+    font-weight: bolder;
+
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*...now i a coding the body.....textbox*/
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left:50% ;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    padding: 5% 0;
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 15px;
+    color: #fff;
+}
+
+/*hiding the icons from font awesome......*/
+
+nav .fa{
+    display: none;
+
+}
+
+/*-----coding the popping section---*/
+#section {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+#section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/*responsive part for small screens like smart phones and tablets......*/
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 30px;
+    }
+
+    nav{
+        position:relative;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        padding: 2% 6%;
+        justify-content: space-between;
+        z-index: 999;
+        box-shadow: 2PX 2PX 10px 10px rgba(0, 0, 0, 0.19);
+    }
+
+    .nav-links{
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        background: #e09191;
+        transition: 1s;
+    }
+    
+    .nav-links ul li{
+        display: block;
+    }
+
+    /*displaying the icons from font awesome in smaller screens......*/
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        margin: 10%;
+        font-size: 22px;
+    }
+
+    nav img{
+        width: 20px;
+    }
+
+    .nav-links ul{
+        padding: 35px;
+
+    }
+    .course h2{
+        font-size: 20px;
+    } 
+
+}
+
+/*-----coding the footer section--------*/
+
+.footer{
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0 ;
+}
+
+/*Coding the course*/
+.course{
+    width: 100%;
+    text-align: center;
+    margin:auto;
+    padding-top: 100px;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 14px;
+    color: #777;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.video{
+    border-radius: 10px;
+}
+
+.course-column .img{
+    border-radius: 15px;
+}
+
+.course-column{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+
+.course-column:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.19);
+}
+
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+
+    .video{
+        width: 70%;
+        border-radius: 10px;
+    }
+}

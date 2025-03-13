@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TausaiEdutech-ZW</title>
+
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('#section');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible'); // Optional: remove class when not in view
+                    }
+                });
+            }, {
+                threshold: 0.2 // Trigger the effect when 20% of the section is visible
+            });
+    
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/redcap.png" alt="Alma Institute-Mutare"></a>
+            <div class="nav-links" id = "navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#">COURSES</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div class="text-box">
+            <h1>KNOW MORE ABOUT US</h1>
+           <p>We are TausaiEdutech-ZW</p>
+        </div>
+
+    </section>
+
+    <!--now coding the courses section-->
+
+    <section class="course" id="section">
+        
+        <h2>OUR SUCCESFUL JOURNEY WAS NEVER EASY FROM START. HERE IS OUR STORY AND MISSION</h2>
+        <p>The main aim is to equip citizens with technology skills so that they can pass and shine in their examinations. The skill we give them will enable them to be tech gurus in the future</p>
+
+        <div class="row">
+            <div class="course-column">
+                <h3>HOW IT ALL STARTED</h3>
+                <p>My passion for teaching and sharing knowledge in the field of technology began several years ago, when I realized the impact that technology can have on people's lives. As I delved deeper into the world of coding, web development, and digital literacy, I became eager to share my expertise with others. I started creating online tutorials and guides, which quickly gained popularity among aspiring tech enthusiasts. Encouraged by the positive feedback, I decided to take my teaching to the next level by creating this online platform, where I can share my knowledge and experience with a wider audience. Today, I'm excited to offer a range of tutorials, courses, and resources designed to help individuals of all skill levels improve their tech skills and achieve their goals.</p>
+                <div>
+                    <img src="images/matthewt.png">
+                    <div class="img"><br/><br/><br/><br/>
+                </div>
+                    <div>
+                        <img src="images/computers.jpg">
+                    </div>
+                   
+                </div>
+               
+            </div>
+
+            <div class="course-column">
+                <h3>OUR MISSION</h3>
+                
+                    <img src="images/matthewt.png">
+                
+                
+                <p>Our mission is to empower individuals with the knowledge and skills necessary to succeed in today's technology-driven world. We aim to provide high-quality, accessible, and affordable online education and training programs that cater to diverse learning needs and styles. By bridging the gap between technology and people, we strive to foster a community of innovators, thinkers, and problem-solvers who can harness the power of technology to achieve their goals and make a positive impact in their communities. Through our tutorials, courses, and resources, we are committed to helping individuals acquire the skills, confidence, and creativity needed to thrive in an increasingly digital landscape.</p>
+
+            </div>
+
+            <div class="course-column">
+                <h3>OUR CEO</h3>
+                
+                
+                <p>Meet Tausai Matthew, our visionary CEO and founder. With a passion for technology and education, Tausai has dedicated his career to empowering individuals and communities through digital literacy and skills development. As a seasoned educator, developer, and entrepreneur, Tausai brings a unique blend of expertise and experience to our organization. Under his leadership, our platform has grown into a vibrant community of learners, educators, and innovators. Tausai's commitment to accessibility, equity, and excellence in education drives our mission and inspires our team to strive for excellence in everything we do</p>
+
+                <video autoplay loop muted plays-inline class="video">
+                    <source src="images/matthew.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer" id="section">
+        <h4>About Us</h4>
+        <p>Be Part Of Us Today And Your Career Opportunities Will Not Be The Same</p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <a href="https://wa.me/+263778071375" target="_blank"></a><i class="fa-brands fa-whatsapp"></i></a>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <p>Made By Tausai Matthew</p>
+        </div>
+     </section>
+
+     <!--javascript code to make the nav icons respond when clicked-->
+     <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+    
+</body>
+</html>

@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alma Institute-Mutare</title>
+    <title>TausaiEdutech-ZW</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('#section');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible'); // Optional: remove class when not in view
+                    }
+                });
+            }, {
+                threshold: 0.2 // Trigger the effect when 20% of the section is visible
+            });
+    
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
 </head>
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="images/AI LOGO.png" alt="Alma Institute-Mutare"></a>
+            <a href="index.html"><img src="images/redcap.png" alt="Alma Institute-Mutare"></a>
             <div class="nav-links" id = "navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CURRICULUM</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#">COURSES</a></li>
                     <li><a href="#">BLOG</a></li>
-                    <li><a href="#">EA GALLERY</a></li>
-                    <li><a href="#">AI GALLERY</a></li>
+                    <li><a href="#">GALLERY</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
@@ -27,13 +52,156 @@
         </nav>
         
         <div class="text-box">
-            <h1>Enhance Your Future With ALMA INSTITUTE</h1>
+            <h1>TAUSAI EDUTECH, LETS MOVE TOGETHER</h1>
            <p>To dedicate ourselves to safeguarding the welfare of learners that nurtures knowledge acquisition and <br/> wisdom so that they meet challenges positively.</p>
            <a href="#" class="visit-btn">Visit us to know More</a>
         </div>
+
     </section>
 
-   ! ...........javascript to toggle menu........
+    <!--now coding the courses section-->
+
+    <section class="course" id="section">
+        
+        <h2>WE OFFER THE FOLLOWING SERVICES TO OUR VALUED CLIENTS AT AFFORDABLE PRICES</h2>
+        <p>The main aim is to equip citizens with technology skills so that they can pass and shine in their examinations. The skill we give them will enable them to be tech gurus in the future</p>
+
+        <div class="row">
+            <div class="course-column">
+                <h3>Secondary Students</h3>
+                <p>You can Click Here if you want to pass your exams shinely. We are Here for you. The material you want to shine is available here!!!. Do you want to be a Guru, If yes, Use these Materials</p>
+            </div>
+
+            <div class="course-column">
+                <h3>Degree Courses</h3>
+                <p>You can Click Here if you want to pass your exams shinely. We are Here for you. The material you want to shine is available here!!!. Do you want to be a Guru, If yes, Use these Materials</p>
+            </div>
+
+            <div class="course-column">
+                <h3>Post Graduation</h3>
+                <p>You can Click Here if you want to pass your exams shinely. We are Here for you. The material you want to shine is available here!!!. Do you want to be a Guru, If yes, Use these Materials</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--now coding the campus section-->
+    <section class="campus" id="section">
+        <h2>TAUSAI EDUTECH IS LOCATED AT THE CITY OF MUTARE, ZIMBABWE</h2>
+        <p>We are committed to providing our clients with a safe and comfortable learning environment. Our campus is designed to accommodate students of all ages and abilities, ensuring that everyone has the opportunity to learn and grow. We are located at the heart of the city of Mutare, Zimbabwe, which offers a beautiful and picturesque environment for students to study and grow.</p>
+
+        <div class="row">
+            <div class="campus-column">
+                <img src="images/masvingo2.jpeg" alt="Campus"/>
+                <div class="layer">
+                    <h1>HARARE CBD</h1>
+                </div>
+            </div>
+
+            <div class="campus-column">
+                <img src="images/masvingo2.jpeg" alt="Campus"/>
+                <div class="layer">
+                    <h1>MUTARE CBD</h1>
+                </div>
+            </div>
+
+            <div class="campus-column">
+                <img src="images/masvingo2.jpeg" alt="Campus"/>
+                <div class="layer">
+                    <h1>MASVINGO CBD</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="facilities" id="section">
+        <h1>OUR FACILITIES</h1>
+        <P>We have some world class facilities that offers a conduicive environment for everyone</P>
+
+        <div class="row">
+            <div class="facility-column">
+                <img src="images/complab.PNG">
+                <h2>COMPUTER ROOM</h2>
+                <p>We have an excellent academic hall with state-of-the-art technology for students to study</p>
+            </div>
+
+            <div class="facility-column">
+                <img src="images/hall.PNG">
+                <h2>SCHOOL HALL</h2>
+                <p>We have an excellent academic hall with state-of-the-art technology for students to study</p>
+            </div>
+
+            <div class="facility-column">
+                <img src="images/schoollib.PNG">
+                <h2>SCHOOL LIBRARY</h2>
+                <p>We have an excellent academic hall with state-of-the-art technology for students to study</p>
+            </div>
+        </div>
+    </section>
+
+    <!--testimonies section-->
+    <section class="testimonies" id="section">
+        <h1>WHAT OUR SATISFIED STUDENTS SAYS ABOUT US?</h1>
+        <p>Some of our satisfied clients have heard about our outstanding services</p>
+
+        <div class="row">
+            <div class="testimonies-col">
+                <img src="images/matthewt.png" alt="matthew">
+                <div>
+                    <p>The educators are so dedicated to their wok and they respect their mission. i went their with zero programming skills but now i am one of the most talented person in town because of the team. Enough respect</p>
+                    <h3>Matthew Tausai</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                   <i class="fa fa-star-o"></i>
+                   <i class="fa fa-star"></i>
+
+                </div>
+                
+            </div>
+
+            <div class="testimonies-col">
+                <img src="images/Capture.PNG" alt="matthew">
+                <div>
+                    <p>The educators are so dedicated to their wok and they respect their mission. i went their with zero programming skills but now i am one of the most talented person in town because of the team. Enough respect</p>
+                    <h3>Admire Pachedu</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+     <!--call to action-->
+     <section class="cta" id="section">
+        <h1>Enroll For Our Various Online Courses Anywhere you are <br/>And Be Tech Guru. What About That???</h1>
+        <a href="" class="visit-btn">Contact Us Today</a> 
+     </section>
+
+     <section class="footer" id="section">
+        <h4>About Us</h4>
+        <p>Be Part Of Us Today And Your Career Opportunities Will Not Be The Same</p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <p>Made By Tausai Matthew</p>
+          </div>
+     </section>
+
+        
+
+     <!--javascript code to make the nav icons respond when clicked-->
     <script>
         var navLinks = document.getElementById("navLinks");
 
